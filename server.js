@@ -8,7 +8,7 @@ var mongoose=require('mongoose')
 var bp=require('body-parser');
 var helmet=require('helmet');
 var books=require('./models/book');
-
+var alert=require('alert-node')
 app.use(bp.json())
 app.use(bp.urlencoded({extended:false}));
 app.use(helmet());
@@ -55,6 +55,9 @@ var arr=doc.comment;
   doc.save(function(err){
   if(err){console.log(err)}
     
+    
+    
+    res.json(doc);
   
   })
 

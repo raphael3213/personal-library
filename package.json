@@ -10,6 +10,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "alert-node": "^1.2.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "helmet": "^3.12.1",

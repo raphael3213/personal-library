@@ -1,4 +1,5 @@
 dependencies:
+  alert-node: 1.2.1
   body-parser: 1.18.3
   express: 4.16.3
   helmet: 3.12.1
@@ -13,6 +14,12 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-63d99gEXI6OxTopywIBcjoZ0a9I=
+  /alert-node/1.2.1:
+    dev: false
+    engines:
+      node: '>=6.0.0'
+    resolution:
+      integrity: sha512-Uf4Sk/K70HJFN8zbkhksx6ZG48Tiy5PEnznzRp2v63RJrThidEa9eQW3FbHSL+n/X+g5TB4tieeiRjPNU0CWSQ==
   /array-flatten/1.1.1:
     dev: false
     resolution:
@@ -635,6 +642,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 7
 shrinkwrapVersion: 3
 specifiers:
+  alert-node: ^1.2.1
   body-parser: ^1.18.3
   express: ^4.16.3
   helmet: ^3.12.1
