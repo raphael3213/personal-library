@@ -32,7 +32,7 @@ console.log(req.body);
   var newBook=new books;
   newBook.title=req.body.title;
   newBook.comments=[];
-  newBook.Book_id=Math.round(Math.random()*100000000);
+  newBook.book_id=Math.round(Math.random()*100000000);
  newBook.save(function(err){
  
  if(err){console.log(err)}
@@ -44,7 +44,12 @@ console.log(req.body);
 })
 
 
-app.post()
+app.post('addcomm',function(req,res,next){
+
+books.findOneandUpdate({book_id})
+
+
+})
 
 
 // listen for requests :)
