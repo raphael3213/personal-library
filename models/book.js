@@ -3,7 +3,7 @@ var mongoose=require('mongoose')
 var bookSchema=mongoose.Schema({
 
     title:String,
-    id1:Number,
+    book_id:Number,
     comment:Array
 
 

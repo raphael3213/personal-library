@@ -32,10 +32,20 @@ console.log(req.body);
   var newBook=new books;
   newBook.title=req.body.title;
   newBook.comments=[];
-  newBook.id1=Math.round(Math.random*100000000);
+  newBook.Book_id=Math.round(Math.random()*100000000);
+ newBook.save(function(err){
+ 
+ if(err){console.log(err)}
+ 
+ })
+  
   res.json(newBook);
 
 })
+
+
+app.post()
+
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
