@@ -14,10 +14,14 @@ app.use(bp.urlencoded({extended:false}));
 app.use(helmet());
 app.use(express.static('public'));
 
+mongoose.connnect()
+
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
+
+
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
