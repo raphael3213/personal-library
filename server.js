@@ -30,7 +30,9 @@ app.get("/", function (request, response) {
 
 app.post('/addbooks',function(req,res,next){
 
-console.log(req.body);
+ if(req.body.title=""){
+  res.json({error:"Enter a valid title"})
+  }
   
   var newBook=new books;
   newBook.title=req.body.title;
