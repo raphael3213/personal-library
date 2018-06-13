@@ -11,7 +11,10 @@ var books=require('./models/book');
 var alert=require('alert-node')
 app.use(bp.json())
 app.use(bp.urlencoded({extended:false}));
-app.use(helmet());
+
+app.use(helmet.noCache());
+app.use(helmet.hidePoweredBy({ setTo: 'PHP 4.2.0' }));
+
 app.use(express.static('public'));
 
 mongoose.connect(process.env.MONGO_URI,function(err){
