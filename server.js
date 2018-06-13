@@ -31,7 +31,7 @@ console.log(req.body);
   
   var newBook=new books;
   newBook.title=req.body.title;
-  newBook.comments=[];
+  newBook.comment=[];
   newBook.book_id=Math.round(Math.random()*100000000);
  newBook.save(function(err){
  
@@ -44,14 +44,19 @@ console.log(req.body);
 })
 
 
-app.post('addcomm',function(req,res,next){
+app.post('/addcomm',function(req,res,next){
 console.log(req.body);
 books.findOne({book_id:req.body.book_id},function(err,doc){
 
 if(err){console.log(err)}
-var arr=doc.comments;
+var arr=doc.comment;
   
-  doc.comments.push(req.body.comment);
+  doc.comment.push(req.body.comment);
+  doc.save(function(err){
+  if(err){console.log(err)}
+    
+  
+  })
 
 })
 
