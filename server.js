@@ -45,8 +45,15 @@ console.log(req.body);
 
 
 app.post('addcomm',function(req,res,next){
+console.log(req.body);
+books.findOne({book_id:req.body.book_id},function(err,doc){
 
-books.findOneandUpdate({book_id})
+if(err){console.log(err)}
+var arr=doc.comments;
+  
+  doc.comments.push(req.body.comment);
+
+})
 
 
 })
