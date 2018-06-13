@@ -67,7 +67,21 @@ var arr=doc.comment;
 })
 
 
-// listen for requests :)
+
+
+
+app.get('/all',function(req,res,next){
+
+books.find({},function(err,doc){
+
+if(err){console.log(err)}
+  
+  res.json(doc);
+})})
+
+
+
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
+
